@@ -111,6 +111,9 @@ body .begin {
 .button.sec {
     color: var(--main-wight-color);
     background-color: var(--accent-color);
+    letter-spacing: 0.06em;
+    border: none;
+    
 }
 
 
