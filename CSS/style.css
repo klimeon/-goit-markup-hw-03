@@ -24,11 +24,6 @@ body {
     letter-spacing: 0.03em;
     text-align: center;
 }
-h2 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-}
 .container {
     width: 1200px;
     padding: 0px 15px;
@@ -93,6 +88,7 @@ body .begin {
 .button {
     color: var(--title-color);
     background-color: var(--bcg-sec-color);
+    font-family: 'Roboto', sans-serif ;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -100,9 +96,11 @@ body .begin {
     
     cursor: pointer;
     display: inline-block;
+    border: none;
     border-radius: 6px;
-    padding: 10px 32px;
-    /* min-width: 216px; */
+    min-height: 38px;
+    min-width: 73px;
+    
 }
 .button.pri:hover, .button.pri:focus {
     color: var(--main-wight-color);
@@ -112,7 +110,8 @@ body .begin {
     color: var(--main-wight-color);
     background-color: var(--accent-color);
     letter-spacing: 0.06em;
-    border: none;
+    min-width: 216px;
+    min-height: 50px;
     
 }
 
@@ -228,6 +227,11 @@ header .link {
 
 
 /* activity */
+.main-titles {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+}
 .activity-images {
     display: flex;
     justify-content: space-between;
@@ -290,11 +294,17 @@ address .link {
 .select-button {
     display: flex;
     justify-content: center;
+    column-gap: 8px;
+    margin-top: 94px;
 }
 .main-portfolio .button {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
+}
+ .main-portfolio .button.pri + .button.pri {
+    display: block;
+    margin-right: 8px;
 }
 .works-item {
     width: calc((100% - 2 * 30px) / 3);
