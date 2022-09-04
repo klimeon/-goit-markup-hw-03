@@ -9,7 +9,7 @@
     --main-wight-color: #ffffff;
     --spec-link-color: rgba(255, 255, 255, 0.6);
 
-    --single-padding : 94px;
+    --main-padding : 94px;
 }
 
 
@@ -29,17 +29,16 @@ body {
     padding: 0px 15px;
     margin-left: auto;
     margin-right: auto;
-    /* margin-top: 0px;
-    margin-bottom: 0px;     */
+}
+.preference, .activity, .ourteam, .portfolio {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
 }
 .flex {
     display: inline-flex;
     align-items: center;
 }
-.box:not(:last-child) {
-    margin-top: 0px;
-    margin-bottom: var(--single-padding);  
-}
+
 /* скинути крайні відступи */
 /* body .end {
     margin-bottom: 0px;
@@ -70,20 +69,18 @@ body .begin {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
-/* !!!!!Переробити */
+}
+/* обнулення заголовків */
 [class*="title"] {
     margin-bottom: 0px;
     margin-top: 0px;
 }
-
-/* .main-home .end-block {
-    margin-bottom: 0px;
+/* обнулення img відступу */
+[class*="image"] {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
-.main-home .start-block {
-    margin-top: 0px;
-} */
-/* !!!!!!Переробити */
 
 /* кнопки */
 .button {
@@ -134,7 +131,6 @@ body .begin {
     color: var(--accent-color)
 }
 .header {
-    /* колір ок */
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -180,7 +176,7 @@ header .link {
 .hero {
     background-color: var(--bcg-pri-color);
     letter-spacing: 0.06em;
-    text-transform: uppercase;
+    
     padding-top: 200px;
     padding-bottom: 200px;
     
@@ -189,6 +185,7 @@ header .link {
     color: var(--main-wight-color);
     font-size: 44px;
     line-height: 1.36;
+    text-transform: uppercase;
 
     width: 696px;
     margin-bottom: 30px;
@@ -203,15 +200,17 @@ header .link {
 }
 .preference-coloms {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
-.title {
+.preference-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    
     margin-bottom: 10px;
 }
+/* оформлення і скидання параграфів */
 [class*="text"] {
     color: var(--text-color);
     line-height: 1.7;
@@ -219,48 +218,66 @@ header .link {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.preference-text {
-    margin-right: 30px;
-}
-.single {
-    padding-top: var(--single-padding);
-    padding-bottom: var(--single-padding);
+.preference-item:not(:last-child) {
+    padding-right: 30px;
 }
 
 
 /* activity */
+.activity {
+    padding-top: 0px;
+}
 .main-titles {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
 }
-.activity-images {
+.activity-coloms {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
 }
+/* .activity-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
 
 
 /* team */
 .ourteam {
     background-color: var(--bcg-sec-color);
 }
-.aboutus {
-    background-color: var(--main-wight-color);
-
+.ourteam-coloms {
     display: flex;
     justify-content: space-between;
     margin-top: 50pt;
+}
+.team-item {
+    border: 1px solid #EEEEEE;
+}
+/* .team-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
+.ourteam-css {
+    background-color: var(--main-wight-color);
+
+    padding-bottom: 30px;
+    padding-top: 30px;
+    
 }
 .team-title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
+
+    margin-bottom: 10px;
 }
-.teem{
+.teem-text{
     font-size: 16px;
     line-height: 1.19;
-    /* в парі з text */
 }
 
 
@@ -296,7 +313,6 @@ address .link {
     display: flex;
     justify-content: center;
     column-gap: 8px;
-    margin-top: 94px;
     margin-bottom: 50px;
 }
 .main-portfolio .button {
@@ -314,6 +330,7 @@ address .link {
 /* Сітка */
 .works-item {
     width: calc((100% - 2 * 30px) / 3);
+    border: 1px solid #EEEEEE;
 }
 .works-item:not(:nth-child(3n)) {
     margin-right: 30px;
@@ -342,7 +359,7 @@ address .link {
 /* fix by mentor*/
 .our-works-css {
     padding: 20px 24px;
-    border: 1px solid #EEEEEE;
+    
     /* !!!зазор між фоткою і текстом? */
 }
 
